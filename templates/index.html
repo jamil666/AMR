@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>AMR.AZ</title>
+	<!-- core CSS -->
+
+    <link href={% static 'css/bootstrap.min.css' %} rel="stylesheet">
+
+    <link href={% static 'css/font-awesome.min.css' %} rel="stylesheet">
+
+    <link href={% static 'css/animate.min.css' %} rel="stylesheet">
+
+    <link href={% static 'css/owl.carousel.css' %} rel="stylesheet">
+
+    <link href={% static 'css/owl.transitions.css' %} rel="stylesheet">
+
+    <link href={% static 'css/prettyPhoto.css' %} rel="stylesheet">
+
+    <link href={% static 'css/main.css' %} rel="stylesheet">
+
+    <link href={% static 'css/responsive.css' %} rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+
+    <link rel="shortcut icon" href={% static 'images/ico/favicon.ico' %}>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body id="home" class="homepage">
+
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="index.html"><img src={% static 'images/logo.png' %} alt="logo"></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="#home">Home</a></li>
+                        <li class="scroll"><a href="#features">Features</a></li>
+                        <li class="scroll"><a href="#services">Services</a></li>
+                        <li class="scroll"><a href="#about">About</a></li>
+                        <li class="scroll"><a href="#blog">Blog</a></li> 
+                        <li class="scroll"><a href="#get-in-touch">Contact</a></li>   
+                    </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false"><img src={% static 'images/az_lang.png'%} alt="">&nbsp;AZ<span class="caret"></img></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><img src={% static 'images/en_lang.png'%} alt="">&nbsp;EN</a></li>
+                            <li><a href="#"><img src={% static 'images/ru_lang.png'%} alt="">&nbsp;RU</a></li>
+                        </ul>
+                </div>
+           
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="main-slider">
+        <div class="owl-carousel">
+            <div class="item" style="background-image: url(images/slider/bg3.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2><span>ARRATTA</span> is the best ERP system</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
+                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+             <div class="item" style="background-image: url(images/slider/bg4.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2>Beautifully designed <span>free</span> one page template</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
+                                    <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+        </div><!--/.owl-carousel-->
+    </section><!--/#main-slider-->
+
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">{{ FirstTableForm.TableHeaderBigText }}</h2>
+                <p class="text-center wow fadeInDown">{{ FirstTableForm.TableHeaderText }}</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <img class="img-responsive" src={{ FirstTableForm.TableImage.url }} alt="">
+                </div>
+                <div class="col-sm-6">
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ FirstTableForm.FirstRowHeader }}</h4>
+                            <p>{{ FirstTableForm.FirstRowText }}</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ FirstTableForm.SecondRowHeader }}</h4>
+                            <p>{{ FirstTableForm.SecondRowText }}</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ FirstTableForm.ThirdRowHeader }} </h4>
+                            <p>{{ FirstTableForm.ThirdRowText }}</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ FirstTableForm.ThirdRowHeader }}</h4>
+                            <p>{{ FirstTableForm.ThirdRowText }}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>Lorem </span> Ipsum is simply dummy text of the printing and typesetting </h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Mauris pretium auctor quam. Vestibulum et nunc id nisi fringilla <br />iaculis. Mauris pretium auctor quam.</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Free Download</a></p>
+                <img class="img-responsive wow fadeIn" src={% static 'images/cta2/cta2-img.png' %} alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" >
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">{{ SecondTableForm.TableHeaderBigText }}</h2>
+                <p class="text-center wow fadeInDown">{{ SecondTableForm.TableHeaderText }}</p>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-line-chart"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{ SecondTableForm.FirstRowHeader }}</h4>
+                                <p>{{ SecondTableForm.FirstRowText }}</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-cubes"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{ SecondTableForm.SecondRowHeader }}</h4>
+                                <p>{{ SecondTableForm.SecondRowText }}</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-pie-chart"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{ SecondTableForm.ThirdRowHeader }}</h4>
+                                <p>{{ SecondTableForm.ThirdRowText }}</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-bar-chart"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{ SecondTableForm.FourthRowHeader }}</h4>
+                                <p>{{ SecondTableForm.FourthRowText }}</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-language"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{ SecondTableForm.FifthRowHeader }}</h4>
+                                <p>{{ SecondTableForm.FifthRowText }}</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-bullseye"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{ SecondTableForm.SixthRowHeader }}</h4>
+                                <p>{{ SecondTableForm.SixtRowText }}</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div>
+            </div><!--/.row-->    
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+   <section id="about">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">{{ ThirdTableForm.TableHeaderBigText }}</h2>
+                <p class="text-center wow fadeInDown">{{ ThirdTableForm.TableHeaderText }}</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <h3 class="column-title">Video Intro</h3>
+                    
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src={{ ThirdTableForm.Video }} width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/165186232">Marfa: This Must be the Place</a> from <a href="https://vimeo.com/alchemycreative">ALCHEMYcreative</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 wow fadeInRight">
+                    <h3 class="column-title">{{ ThirdTableForm.FirstRowHeader }}</h3>
+                    <p>{{ ThirdTableForm.FirstRowText }}</p>
+
+                    <p>{{ ThirdTableForm.FirstRowText2 }}</p>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="nostyle">
+                                <li><i class="fa fa-check-square"></i> {{ ThirdTableForm.Choose1 }}</li>
+                                <li><i class="fa fa-check-square"></i> {{ ThirdTableForm.Choose3 }}</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <ul class="nostyle">
+                                <li><i class="fa fa-check-square"></i> {{ ThirdTableForm.Choose2 }}</li>
+                                <li><i class="fa fa-check-square"></i> {{ ThirdTableForm.Choose4 }}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary" href="#">Learn More</a>
+
+                </div>
+            </div>
+        </div>
+    </section><!--/#about-->
+
+    <section id="work-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">{{ FourthTableForm.TableHeaderBigText }}</h2>
+                <p class="text-center wow fadeInDown">{{ FourthTableForm.TableHeaderText }}</p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="icon-circle">
+                            <span>1</span>
+                            <i class="fa fa-coffee fa-2x"></i>
+                        </div>
+                        <h3>{{ FourthTableForm.Circle1 }}</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="icon-circle">
+                            <span>2</span>
+                            <i class="fa fa-bullhorn fa-2x"></i>
+                        </div>
+                        <h3>{{ FourthTableForm.Circle2 }}</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="icon-circle">
+                            <span>3</span>
+                            <i class="fa fa-image fa-2x"></i>
+                        </div>
+                        <h3>{{ FourthTableForm.Circle3 }}</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <div class="icon-circle">
+                            <span>4</span>
+                            <i class="fa fa-keyboard-o fa-2x"></i>
+                        </div>
+                        <h3>{{ FourthTableForm.Circle4 }}</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
+                        <div class="icon-circle">
+                            <span>5</span>
+                            <i class="fa fa-laptop fa-2x"></i>
+                        </div>
+                        <h3>{{ FourthTableForm.Circle5 }}</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms">
+                        <div class="icon-circle">
+                            <span>6</span>
+                            <i class="fa fa fa-plane fa-2x"></i>
+                        </div>
+                        <h3>{{ FourthTableForm.Circle6 }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#work-process-->
+
+  Premium quality
+    <section id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">{{ FifthTableForm.TableHeaderBigText }}</h2>
+                <p class="text-center wow fadeInDown">{{ FifthTableForm.TableHeaderText }}</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="blog-post blog-large wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <article>
+                            <header class="entry-header">
+                                <div class="entry-thumbnail">
+                                    <img class="img-responsive" src={% static 'images/blog/01.jpg' %} alt="">
+
+                                    <span class="post-format post-format-video"><i class="fa fa-film"></i></span>
+                                </div>
+                                <div class="entry-date">25 November 2014</div>
+                                <h2 class="entry-title"><a href="#">{{ FifthTableForm.Column1_Header }}</a></h2>
+                            </header>
+
+                            <div class="entry-content">
+                                <P>{{ FifthTableForm.Column1_Text }}</P>
+                                <a class="btn btn-primary" href="#">Read More</a>
+                            </div>
+
+                            <footer class="entry-meta">
+                                <span class="entry-author"><i class="fa fa-pencil"></i> <a href="#">Victor</a></span>
+                                <span class="entry-category"><i class="fa fa-folder-o"></i> <a href="#">Tutorial</a></span>
+                                <span class="entry-comments"><i class="fa fa-comments-o"></i> <a href="#">15</a></span>
+                            </footer>
+                        </article>
+                    </div>
+                </div><!--/.col-sm-6-->
+                <div class="col-sm-6">
+                    <div class="blog-post blog-media wow fadeInRight" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <article class="media clearfix">
+                            <div class="entry-thumbnail pull-left">
+                                <img class="img-responsive" src={% static 'images/blog/02.jpg' %} alt="">
+
+                                <span class="post-format post-format-gallery"><i class="fa fa-image"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <header class="entry-header">
+                                    <div class="entry-date">01 December 2014</div>
+                                    <h2 class="entry-title"><a href="#">{{ FifthTableForm.Column2_Header }}</a></h2>
+                                </header>
+
+                                <div class="entry-content">
+                                    <P>{{ FifthTableForm.Column2_Text }}</P>
+                                    <a class="btn btn-primary" href="#">Read More</a>
+                                </div>
+
+                                <footer class="entry-meta">
+                                    <span class="entry-author"><i class="fa fa-pencil"></i> <a href="#">Campbell</a></span>
+                                    <span class="entry-category"><i class="fa fa-folder-o"></i> <a href="#">Tutorial</a></span>
+                                    <span class="entry-comments"><i class="fa fa-comments-o"></i> <a href="#">15</a></span>
+                                </footer>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="blog-post blog-media wow fadeInRight" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <article class="media clearfix">
+                            <div class="entry-thumbnail pull-left">
+                                <img class="img-responsive" src={% static 'images/blog/03.jpg' %} alt="">
+                                <span class="post-format post-format-audio"><i class="fa fa-music"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <header class="entry-header">
+                                    <div class="entry-date">03 November 2014</div>
+                                    <h2 class="entry-title"><a href="#">{{ FifthTableForm.Column3_Header }}</a></h2>
+                                </header>
+
+                                <div class="entry-content">
+                                    <P>{{ FifthTableForm.Column3_Text }}</P>
+                                    <a class="btn btn-primary" href="#">Read More</a>
+                                </div>
+
+                                <footer class="entry-meta">
+                                    <span class="entry-author"><i class="fa fa-pencil"></i> <a href="#">Ruth</a></span>
+                                    <span class="entry-category"><i class="fa fa-folder-o"></i> <a href="#">Tutorial</a></span>
+                                    <span class="entry-comments"><i class="fa fa-comments-o"></i> <a href="#">15</a></span>
+                                </footer>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="get-in-touch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Get in Touch</h2>
+                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+        </div>
+    </section><!--/#get-in-touch-->
+
+
+    <section id="contact">
+        <div id="google-map" style="height:650px" data-latitude="40.3960553" data-longitude="49.8157945"></div>
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <div class="contact-form">
+                            <h3>Contact Info</h3>
+
+                            <address>
+                              <strong>{{ ContactForm.Header }}</strong><br>
+                              {{ ContactForm.Text }}
+                              <abbr title="Phone">P:</abbr> (123) 456-7890
+                            </address>
+
+                            <form id="main-contact-form" name="contact-form" method="post" action="#">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" rows="8" placeholder="Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2016 AMR.AZ 
+                </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src={% static 'js/jquery.js' %}></script>
+    <script src={% static 'js/bootstrap.min.js' %}></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src={% static 'js/owl.carousel.min.js' %}></script>
+    <script src={% static 'js/mousescroll.js' %}></script>
+    <script src={% static 'js/smoothscroll.js' %}></script>
+    <script src={% static 'js/jquery.prettyPhoto.js' %}></script>
+    <script src={% static 'js/jquery.isotope.min.js' %}></script>
+    <script src={% static 'js/jquery.inview.min.js' %}></script>
+    <script src={% static 'js/wow.min.js' %}></script>
+    <script src={% static 'js/main.js' %}></script>
+
+
+</body>
+</html>
+
+
